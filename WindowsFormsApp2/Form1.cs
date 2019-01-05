@@ -32,7 +32,7 @@ namespace WindowsFormsApp2
 
             DataTable dt = new DataTable();
 
-            MySqlDataAdapter da = new MySqlDataAdapter("select * from test_db.person where address = '東京都'", connection);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM test_db.person WHERE address LIKE '東京都%'", connection);
 
             da.Fill(dt);
 
